@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "xtree": "cpp",
+        "iostream": "cpp",
+        "utility": "cpp",
+        "vector": "cpp",
+        "cmath": "cpp",
+        "algorithm": "cpp",
+        "xstring": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "forward_list": "cpp"
+    }
+}

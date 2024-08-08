@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "utility": "cpp",
+        "set": "cpp",
+        "atomic": "cpp",
+        "ios": "cpp",
+        "system_error": "cpp",
+        "vector": "cpp",
+        "xiosbase": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "optional": "cpp",
+        "type_traits": "cpp",
+        "xlocnum": "cpp",
+        "xtr1common": "cpp"
+    }
+}

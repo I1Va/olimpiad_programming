@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp",
+        "queue": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "string": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp"
+    }
+}

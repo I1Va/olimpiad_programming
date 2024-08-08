@@ -1,0 +1,125 @@
+#pragma gcc optimize("O3")
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
+int n, m;
+vector<vector<long long>> t;
+vector<unordered_map<long long, vector<int>>> a_addr;
+
+void brut() {
+    long long ans = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            for (int a = 1; a < n - i; a++) {
+                if (a != (t[i][j] - t[i + a][j])) {
+                    continue;
+                }
+                for (int b = 1; b < m - j; b++) {
+                    int d = a + b - t[i][j];
+                    if (t[i + a][j] + d == b && t[i][j + b] + d == a) {
+                        ans++;
+                    }
+                }
+            }
+        }
+    }
+    cout << ans;
+}
+
+void opt() {
+    long long ans = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            for (int a = 1; a < n - i; a++) {
+                if (a != (t[i][j] - t[i + a][j])) {
+                    continue;
+                }
+                for (int b = 1; b < m - j; b++) {
+                    int d = a + b - t[i][j];
+                    if (1) {
+                        ans++;
+                    }
+                }
+            }
+        }
+    }
+    cout << ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); 
+    cin >> n >> m;
+    t.resize(n);
+    a_addr.resize(m);
+    for (auto& to : t) {
+        to.resize(m);
+    }
+    long long mx = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> t[i][j];
+            mx = max(mx, t[i][j]);
+        }
+    }
+    for (int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i++) {
+            a_addr[j][t[i][j]].push_back(i);
+        }
+    }
+    opt();
+}
+
+#include <iostream>
+#include <vector>
+#include <bitset>
+#include <string>
+using namespace std;
+
+const int sz = 17;
+
+int main() {
+    int t;
+    cin >> t;
+    if (t == 1) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        vector<bitset<sz>> idx(n);
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+            idx[a[i] - 1] = bitset<sz>(i);
+        }
+        for (int i = 0; i < n; i++) {
+            cout << idx[i];
+        }
+    } else {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+        string s;
+        cin >> s;
+        // cout << "s = " << s << "\n";
+        string cur = "";
+        int nu = 1;
+        vector<int> ans(n);
+        for (int i = 0; i < (int) s.size(); i++) {
+            cur += s[i];
+            if ((int) cur.size() == sz) {
+                int temp = bitset<sz>(cur).to_ulong();
+                // cout << temp << "\n";
+                ans[temp] = nu;
+                nu++;
+                cur = "";
+            }
+        }
+        for (auto to : ans) {
+            cout << to << " ";
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "utility": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xutility": "cpp",
+        "string": "cpp",
+        "algorithm": "cpp",
+        "limits": "cpp"
+    }
+}

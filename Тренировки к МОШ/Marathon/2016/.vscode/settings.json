@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "random": "cpp",
+        "utility": "cpp",
+        "chrono": "cpp"
+    }
+}

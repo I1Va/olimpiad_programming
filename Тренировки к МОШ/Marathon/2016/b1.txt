@@ -1,0 +1,6 @@
+5
+1. Math, 5. Linear algebra, 10. ACM Programming
+2. Russian, 5. Linear algebra, 3. Sewing
+1. Math, 10. ACM Programming, 2. Russian, 3. Sewing
+1. Discrete math part 1, 123a. with hard problems
+1. Math, 3. Sewing

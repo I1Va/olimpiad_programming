@@ -1,0 +1,16 @@
+3
+6
+inf inf inf 1 inf inf 
+3 inf inf inf inf inf 
+inf inf inf 4 inf inf 
+6 inf inf inf inf inf 
+inf inf inf 7 inf inf 
+3
+inf 10 100
+90 inf 11 
+6
+inf 10 100 inf inf inf 
+20 110 20 inf inf inf 
+120 30 120 inf inf inf 
+40 130 40 inf inf inf 
+140 50 140 inf inf inf 

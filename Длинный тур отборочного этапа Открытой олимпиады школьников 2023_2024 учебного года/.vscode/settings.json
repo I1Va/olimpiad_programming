@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "xutility": "cpp",
+        "vector": "cpp",
+        "bitset": "cpp",
+        "xhash": "cpp",
+        "algorithm": "cpp",
+        "xstddef": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xstring": "cpp",
+        "string": "cpp",
+        "xiosbase": "cpp",
+        "utility": "cpp",
+        "queue": "cpp",
+        "chrono": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "iosfwd": "cpp",
+        "random": "cpp"
+    }
+}

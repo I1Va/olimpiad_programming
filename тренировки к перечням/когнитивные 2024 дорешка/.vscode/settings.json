@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "vector": "cpp",
+        "xlocale": "cpp",
+        "utility": "cpp",
+        "limits": "cpp",
+        "bitset": "cpp",
+        "cstdlib": "cpp",
+        "xstring": "cpp",
+        "iosfwd": "cpp"
+    }
+}

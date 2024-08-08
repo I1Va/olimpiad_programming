@@ -1,0 +1,32 @@
+12
+D
+D
+D
+R 2
+U
+U
+U
+R 2
+D
+D
+D
+R 2
+
+6
+D
+R 2
+D
+R 6
+U
+R 1
+
+8
+D
+D
+D
+R 3
+U
+R 2
+D
+R 4
+

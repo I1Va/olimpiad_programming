@@ -1,0 +1,86 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+ostream& operator<< (ostream& stream, const vector<int>& a) {
+    for (auto to : a) {
+        stream << to << " ";
+    }
+    return stream;
+}
+
+int n, m;
+
+long long get(int i1, int j1, int i2, int j2, int delta, const vector<vector<int>>& a, vector<vector<int>> b) {
+    long long res = 0;
+    for (int i = i1; i <= i2; i++) {
+        for (int j = j1; j <= j2; j++) {
+            b[i][j] += delta;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            res += abs(a[i][j] - b[i][j]);
+        }
+    }
+    return res;
+}
+
+void solve() {
+
+    cin >> n >> m;
+    vector<vector<int>> a(n, vector<int>(m));
+    long long cur = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+            cur += abs(a[i][j]);
+        }
+    }
+    int c = 0;
+    vector<vector<int>> b(n, vector<int>(m, 0));
+    vector<vector<int>> ans;
+    for (int _ = 0; _ < 16; _++) {
+        vector<int> idx = {-1, -1, -1, -1, -1};
+        long long temp = 1e18;
+        for (int i1 = 0; i1 < n; i1++) {
+            for (int j1 = 0; j1 < m; j1++) {
+                for (int i2 = i1; i2 < n; i2++) {
+                    for (int j2 = j1; j2 < m; j2++) {
+                        for (int w = -100; w <= 100; w++) {
+                            long long res = get(i1, j1, i2, j2, w, a, b);
+                            if (res < temp) {
+                                temp = res;
+                                idx = {i1, j1, i2, j2, w};
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // cout << temp << ": " << idx << "\n";
+        if (temp >= cur) {
+            break;
+        }
+        cur = temp;
+        for (int i = idx[0]; i <= idx[2]; i++) {
+            for (int j = idx[1]; j <= idx[3]; j++) {
+                b[i][j] += idx[4];
+            }
+        }
+        ans.push_back({idx[0] + 1, idx[1] + 1, idx[2] + 1, idx[3] + 1, idx[4]});
+        c++;
+    }
+    cout << c << "\n";
+    for (auto to : ans) {
+        cout << to << "\n";
+    }
+    cout << "\n";
+}
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+}

@@ -1,0 +1,242 @@
+Package: dict
+Available-Versions: 1
+Version: 1.13.0
+Depends: netbase >= 0.0.0, recode >= 0.0.0, libc6 >= 2.34.0, libmaa4 >= 1.4.2
+Size: 48498
+
+Package: gcc-12-base
+Available-Versions: 1
+Version: 12.2.8
+Depends: 
+Size: 18880
+
+Package: gdisk
+Available-Versions: 1
+Version: 1.0.8
+Depends: libc6 >= 2.34.0, libgcc-s1 >= 3.3.1, libncursesw6 >= 6.0.0, libpopt0 >= 1.14.0, libstdc++6 >= 9.0.0, libtinfo6 >= 6.0.0, libuuid1 >= 2.16.0
+Size: 240374
+
+Package: gpgv
+Available-Versions: 1
+Version: 2.2.27
+Depends: libbz2-1.0, libc6 >= 2.34.0, libgcrypt20 >= 1.9.0, libgpg-error0 >= 1.42.0, zlib1g >= 1.1.4
+Size: 136750
+
+Package: htop
+Available-Versions: 1
+Version: 3.0.5
+Depends: libc6 >= 2.34.0, libncursesw6 >= 6.0.0, libnl-3-200 >= 3.2.7, libnl-genl-3-200 >= 3.2.7, libtinfo6 >= 6.0.0
+Size: 128078
+
+Package: libacl1
+Available-Versions: 1
+Version: 2.3.1
+Depends: libc6 >= 2.33.0
+Size: 16218
+
+Package: libblkid1
+Available-Versions: 1
+Version: 2.37.2
+Depends: libc6 >= 2.33.0
+Size: 103598
+
+Package: libbz2-1.0
+Available-Versions: 1
+Version: 1.0.8
+Depends: libc6 >= 2.4.0
+Size: 34446
+
+Package: libc6
+Available-Versions: 3
+Version: 2.35.0
+Depends: libgcc-s1 >> 12.2.8, libcrypt1 >= 4.4.10
+Size: 3235142
+Version: 2.34.7
+Depends: libgcc-s1 >= 12.2.8, libcrypt1 ~= 4.3.21
+Size: 3241067
+Version: 2.34.5
+Depends: libgcc-s1 ^= 12.2.6, libcrypt1 >= 4.4.8
+Size: 3238469
+
+Package: libcap2
+Available-Versions: 1
+Version: 1.2.44
+Depends: libc6 >= 2.33.0
+Size: 18114
+
+Package: libcrypt1
+Available-Versions: 2
+Version: 4.4.27
+Depends: libc6 >= 2.25.0
+Size: 82004
+Version: 4.3.22
+Depends: libc6 ~= 2.24.0
+Size: 82472
+
+Package: libevent-core-2.1-7
+Available-Versions: 1
+Version: 2.1.12
+Depends: libc6 >= 2.33.0
+Size: 93926
+
+Package: libgcc-s1
+Available-Versions: 3
+Version: 12.2.9
+Depends: gcc-12-base == 12.2.9, libc6 >= 2.35.0
+Size: 54224
+Version: 12.2.8
+Depends: gcc-12-base == 12.2.8, libc6 >= 2.34.0
+Size: 53570
+Version: 12.2.6
+Depends: gcc-12-base == 12.2.6, libc6 >= 2.33.0
+Size: 52008
+
+Package: libgcrypt20
+Available-Versions: 1
+Version: 1.9.4
+Depends: libc6 >= 2.33.0, libgpg-error0 >= 1.27.0
+Size: 515428
+
+Package: libgpg-error0
+Available-Versions: 1
+Version: 1.43.3
+Depends: libc6 >= 2.34.0
+Size: 69684
+
+Package: libmaa4
+Available-Versions: 1
+Version: 1.4.7
+Depends: libc6 >= 2.15.0
+Size: 38286
+
+Package: libmount1
+Available-Versions: 1
+Version: 2.37.2
+Depends: libblkid1 >= 2.17.2, libc6 >= 2.34.0, libselinux1 >= 3.1.0
+Size: 122008
+
+Package: libncursesw6
+Available-Versions: 1
+Version: 6.3.2
+Depends: libtinfo6 == 6.3.2, libc6 >= 2.34.0
+Size: 149304
+
+Package: libnl-3-200
+Available-Versions: 1
+Version: 3.5.0
+Depends: libc6 >= 2.34.0
+Size: 59070
+
+Package: libnl-genl-3-200
+Available-Versions: 1
+Version: 3.5.0
+Depends: libnl-3-200 == 3.5.0, libc6 >= 2.4.0
+Size: 12412
+
+Package: libpcre2-8-0
+Available-Versions: 1
+Version: 10.39.3
+Depends: libc6 >= 2.14.0
+Size: 219728
+
+Package: libpopt0
+Available-Versions: 1
+Version: 1.18.3
+Depends: libc6 >= 2.33.0
+Size: 28160
+
+Package: librecode0
+Available-Versions: 1
+Version: 3.6.24
+Depends: libc6 >= 2.14.0
+Size: 670122
+
+Package: libselinux1
+Available-Versions: 1
+Version: 3.3.1
+Depends: libc6 >= 2.34.0, libpcre2-8-0 >= 10.22.0
+Size: 74578
+
+Package: libsmartcols1
+Available-Versions: 1
+Version: 2.37.2
+Depends: libc6 >= 2.14.0
+Size: 51250
+
+Package: libstdc++6
+Available-Versions: 1
+Version: 12.2.8
+Depends: gcc-12-base == 12.2.8, libc6 >= 2.34.0, libgcc-s1 >= 4.2.0
+Size: 698528
+
+Package: libtinfo6
+Available-Versions: 1
+Version: 6.3.2
+Depends: libc6 >= 2.33.0
+Size: 104134
+
+Package: libutempter0
+Available-Versions: 1
+Version: 1.2.1
+Depends: libc6 >= 2.34.0
+Size: 8848
+
+Package: libuuid1
+Available-Versions: 1
+Version: 2.37.2
+Depends: libc6 >= 2.25.0
+Size: 24168
+
+Package: mount
+Available-Versions: 1
+Version: 2.37.2
+Depends: libblkid1 >= 2.17.2, libc6 >= 2.34.0, libmount1 >= 2.37.2, libselinux1 >= 3.1.0, libsmartcols1 >= 2.33.0
+Size: 114234
+
+Package: netbase
+Available-Versions: 1
+Version: 6.3.0
+Depends: 
+Size: 12924
+
+Package: recode
+Available-Versions: 1
+Version: 3.6.24
+Depends: libc6 >= 2.34.0, librecode0 >= 3.6.0
+Size: 110948
+
+Package: sed
+Available-Versions: 1
+Version: 4.8.1
+Depends: libacl1 >= 2.2.23, libc6 >= 2.34.0, libselinux1 >= 3.1.0
+Size: 188226
+
+Package: tar
+Available-Versions: 1
+Version: 1.34.1
+Depends: libacl1 >= 2.2.23, libc6 >= 2.34.0, libselinux1 >= 3.1.0
+Size: 294890
+
+Package: tmux
+Available-Versions: 1
+Version: 3.2.4
+Depends: libc6 >= 2.34.0, libevent-core-2.1-7 >= 2.1.8, libtinfo6 >= 6.0.0, libutempter0 >= 1.1.5
+Size: 428244
+
+Package: zlib1g
+Available-Versions: 1
+Version: 1.2.11
+Depends: libc6 >= 2.14.0
+Size: 58236
+
+Package: zsh
+Available-Versions: 1
+Version: 5.8.1
+Depends: zsh-common == 5.8.1, libc6 >= 2.34.0, libcap2 >= 1.2.10, libtinfo6 >= 6.0.0
+Size: 808808
+
+Package: zsh-common
+Available-Versions: 1
+Version: 5.8.1
+Depends: 
+Size: 3985360

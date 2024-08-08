@@ -1,0 +1,91 @@
+#include <iostream>
+#include <vector>
+#include <map>
+#include <queue>
+#include <algorithm>
+using namespace std;
+
+ostream& operator<< (ostream& stream, priority_queue<long long> a) {
+    while (a.size()) {
+        stream << a.top() << " ";
+        a.pop();
+    }
+    return stream;
+}
+
+void print_map(const map<int, int>& res) {
+    cout << "res:\n";
+    for (auto to : res) {
+        cout << to.first << ": " << to.second << "\n";
+    }
+    cout << "\n";
+}
+
+void collapse(int l, int r, const vector<long long>& a) {
+    priority_queue<long long> q;
+    for (int i = l; i <= r; i++) {
+        q.push(-a[i]);
+    }
+    // cout << "q = " << q << "\n";
+    map<int, int> res;
+    while (q.size() > 1) {
+        cout << "q = " << q << "\n";
+        long long fir = -q.top();
+        q.pop();
+        long long sec = -q.top();
+        q.pop();
+        if (fir != sec) {
+            if (res.find(fir) == res.end()) {
+                res[fir] = 0;
+            }
+            res[fir]++;
+            q.push(-sec);
+        } else {
+            q.push(-(fir + 1));
+        }
+    }
+    long long fir = -q.top();
+    if (res.find(fir) == res.end()) {
+        res[fir] = 0;
+    }
+    res[fir]++;
+    print_map(res);
+    return res.size() == 1;
+}
+
+// bool check(const vector<int>& a) {
+//     map<int, int> cnt;
+//     for (int x : a) {
+//         cnt[x]++;
+//     }
+//     int lay = cnt.begin() -> first;
+//     int val = cnt.begin() -> second;
+//     auto it = cnt.begin();
+//     it++;
+//     while (1) {
+//         // Какой остаток оставим?
+//         if (it == cnt.end()) { // Можно оставить остаток 1
+
+//         }
+//     }
+// }
+
+int main() {
+    int n;
+    cin >> n;
+    vector<long long> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];  
+    }
+    cout << brut_check(0, n - 1, a);
+    // long long ans = 0;
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = i; j < n; j++) {
+    //         if (brut_check(i, j, a)) {
+    //             // cout << "[" << i << ":" << j << "]\n";
+    //             ans++;
+    //         }
+    //     }
+    // }
+    // cout << ans;
+}
